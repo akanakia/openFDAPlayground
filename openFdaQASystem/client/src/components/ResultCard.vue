@@ -12,10 +12,10 @@
 
 <script>
 export default {
-  name: "ResultCard",
+  name: 'ResultCard',
   props: {
     originalQuery: String,
-    textResult: String
+    textResult: String,
   },
-}
+};
 </script>
