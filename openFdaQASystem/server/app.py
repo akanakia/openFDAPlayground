@@ -11,6 +11,9 @@ app.config.from_object(__name__)
 # enable CORS
 CORS(app, resources={r'/*': {'origins': '*'}})
 
+# internal methods
+
+
 # API methods
 @app.route('/')
 def root():

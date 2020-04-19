@@ -6,11 +6,11 @@
           <h1>OpenFDA Question-Answering System</h1><hr><br>
         </b-col>
       </b-row>
-      <b-row id="inputArea">
+      <b-row class="my-5" id="inputArea">
         <b-col>
           <b-form @submit="onSubmit">
             <b-input-group>
-              <b-form-input type="text" v-model="queryText" @keyup.enter="onSubmit"></b-form-input>
+              <b-form-input type="text" v-model="queryText"></b-form-input>
               <b-input-group-append>
                 <b-button type="submit" variant="outline-info">Ask!</b-button>
               </b-input-group-append>
@@ -22,7 +22,11 @@
         v-bind:key="index"
         v-for="(result, index) in results">
         <b-col>
-          <ResultCard :originaQuery="result.Query" :textResult="result.Text"></ResultCard>
+          <ResultCard
+            class="mb-3"
+            :originalQuery="result.Query"
+            :textResult="result.Text">
+          </ResultCard>
         </b-col>
       </b-row>
     </b-container>

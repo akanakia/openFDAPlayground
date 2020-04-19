@@ -3,8 +3,9 @@
     <b-card :title="originalQuery">
       <b-form-textarea
         v-model="textResult"
-        row="3"
-        size="sm">
+        rows="5"
+        size="sm"
+        no-resize>
       </b-form-textarea>
     </b-card>
   </div>
